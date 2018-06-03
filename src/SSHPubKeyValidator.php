@@ -55,7 +55,7 @@ class SSHPubKeyValidator
             return false;
         }
         $keyData = openssl_pkey_get_details($opensslPubKey);
-        if($keyData === false){
+        if ($keyData === false) {
             return false;
         }
         if ($this->strict) {
