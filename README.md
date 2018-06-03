@@ -14,14 +14,20 @@ This package serves to take in an ssh-rsa key and validate whether the key is in
 Via Composer
 
 ``` bash
-$ composer require montross50/SSHPubKeyValidator
+$ composer require montross50/sshpubkey-validator
 ```
 
 ## Usage
 
 ``` php
-$skeleton = new montross50\SSHPubKeyValidator();
-echo $skeleton->echoPhrase('Hello, League!');
+$validator = new montross50\SSHPubKeyValidator();
+$key = "ssh-rsa .......";
+if($validator->validateKey($key)){
+    //key is valid
+}
+else{
+    //key is invalid
+}
 ```
 
 ## Change log
@@ -58,10 +64,10 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/montross50/SSHPubKeyValidator.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/montross50/SSHPubKeyValidator.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/montross50/SSHPubKeyValidator
-[link-travis]: https://travis-ci.org/montross50/SSHPubKeyValidator
-[link-scrutinizer]: https://scrutinizer-ci.com/g/montross50/SSHPubKeyValidator/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/montross50/SSHPubKeyValidator
-[link-downloads]: https://packagist.org/packages/montross50/SSHPubKeyValidator
+[link-packagist]: https://packagist.org/packages/montross50/sshpubkey-validator
+[link-travis]: https://travis-ci.org/montross50/sshpubkey-validator
+[link-scrutinizer]: https://scrutinizer-ci.com/g/montross50/sshpubkey-validator/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/montross50/sshpubkey-validator
+[link-downloads]: https://packagist.org/packages/montross50/sshpubkey-validator
 [link-author]: https://github.com/montross50
 [link-contributors]: ../../contributors

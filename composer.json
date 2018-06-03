@@ -1,12 +1,13 @@
 {
-    "name": "montross50/SSHPubKeyValidator",
+    "name": "montross50/sshpubkey-validator",
     "type": "library",
     "description": "Validate ssh-rsa key for valid openssh format.",
     "keywords": [
         "montross50",
-        "SSHPubKeyValidator"
+        "SSHPubKeyValidator",
+        "sshpubkey-validator"
     ],
-    "homepage": "https://github.com/montross50/SSHPubKeyValidator",
+    "homepage": "https://github.com/montross50/sshpubkey-validator",
     "license": "MIT",
     "authors": [
         {
