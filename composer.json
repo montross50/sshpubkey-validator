@@ -1,0 +1,53 @@
+{
+    "name": "montross50/SSHPubKeyValidator",
+    "type": "library",
+    "description": "Validate ssh-rsa key for valid openssh format.",
+    "keywords": [
+        "montross50",
+        "SSHPubKeyValidator"
+    ],
+    "homepage": "https://github.com/montross50/SSHPubKeyValidator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Trent Schmidt",
+            "email": "sch43228@gmail.com",
+            "homepage": "https://github.com/montross50",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~5.6|~7.0",
+        "ext-openssl": "*",
+        "phpseclib/phpseclib": "~2.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "0.9.*|1.0.*",
+        "php-mock/php-mock-phpunit": "^2.1",
+        "phpunit/phpunit": ">=5.4.3",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "montross50\\SSHPubKeyValidator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "montross50\\SSHPubKeyValidator\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
